@@ -1,137 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Kamu 🤍</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body{
-background:#000;
-overflow:hidden;
-font-family:Arial,sans-serif;
-}
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
 
-video{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-}
+    <div class="overlay">
 
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.35);
-}
+        <h1>Happy Birthday 🎂</h1>
 
-.content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-width:90%;
-}
+        <p class="subtitle">
+            Hari ini bukan cuma tentang bertambahnya usia,
+            tapi tentang betapa berharganya kamu.
+        </p>
 
-img{
-width:220px;
-height:220px;
-object-fit:cover;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,255,255,.3);
-margin-bottom:20px;
-}
-
-h1{
-font-size:32px;
-margin-bottom:10px;
-}
-
-p{
-font-size:18px;
-line-height:1.7;
-white-space:pre-line;
-}
-</style>
-
-
-</body><body
-
-<video autoplay muted loop playsinline>
-    <source src="VID-20250801-WA0032.mp4" type="video/mp4">
-</video>
-
-<div class="overlay"></div>
-
-<div class="content">
-
-    <button id="buka">🤍 Buka Surat 🤍</button>
-
-    <div id="surat" style="display:none;">
-
-        <img id="foto"
-        src="IMG-20250801-WA0027.jpg">
-
-        <h1>🤍 Untuk Kamu 🤍</h1>
-
-<p>
-Hai.
-    
-Happy Birthday yaa.
-
-Semoga semua yang kamu impikan bisa tercapai.
-
-Terima kasih karena pernah menjadi bagian dari cerita hidupku.
-
-Aku nggak berharap balasan apa pun.
-Aku cuma ingin kamu tahu kalau selama ini aku benar-benar tulus mendoakan yang terbaik buat kamu.
-
-Selamat ulang tahun.
-
-Jaga diri baik-baik ya. 🤍
-</p>
+        <button id="playMusic">
+            ▶ Putar Musik
+        </button>
 
     </div>
 
-</div>
+    <audio id="music">
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
 
-<script>
-
-const foto=[
-"IMG-20221102-WA0033.jpg",
-"IMG-20250801-WA0027.jpg"
-];
-
-let i=0;
-
-document.getElementById("buka").onclick=function(){
-
-document.getElementById("buka").style.display="none";
-document.getElementById("surat").style.display="block";
-
-setInterval(function(){
-
-i=(i+1)%foto.length;
-
-document.getElementById("foto").src=foto[i];
-
-},3000);
-
-}
-
-</script>
+    <script src="script.js"></script>
 
 </body>
+</html>
